@@ -1,5 +1,5 @@
 # ros-3dpose-estimation
-# the system can extract 3d position from video per frame
+the system can extract 3d position from video per frame
 ## dependency
 * 3d-pose-baseline
 * ros
