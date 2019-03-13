@@ -1,10 +1,12 @@
 # ros-3dpose-estimation
-the system can extract 3d position from video per frame
+extract 3d joint position from one RGB camera in realtime
+
 ## dependency
-* 3d-pose-baseline
-* ros
-* openpose
+* [rospy](http://wiki.ros.org/ja)
+* [openpose](https://github.com/CMU-Perceptual-Computing-Lab/openpose)
+* [3d-pose-baseline](https://github.com/una-dinosauria/3d-pose-baseline)
+
 ## node introduction
-* video publisher: a node used to publish frames from video
-* openpose_node: receive frame message and extract 2d position then publish
-* 3d-pose-estimation node: receive 2d pose message and estimate 3d position from 2d position then publish it 
+* **video publisher**: a node that can publish frames from video
+* **openpose_node**: subscribe message from **video_publisher** and publish 2d joint position
+* **3d-pose-estimation node**: subscribe message from **openpose_node** and publish 3d joint position
